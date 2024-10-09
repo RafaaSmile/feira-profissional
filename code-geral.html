@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Convite para Evento Tecnológico</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/5.0.6/jquery.inputmask.min.js"></script>
+    <style>
+        body {
+            scroll-behavior: smooth;
+            background-color: #f4f4f7;
+            font-family: Arial, sans-serif;
+        }
+
+        .header {
+            background-color: #f4f4f7;
+            color: #1f1f1f;
+        }
+
+        .header a {
+            color: black;
+            margin: 0 15px;
+        }
+
+        .header a:hover {
+            text-decoration: underline;
+        }
+
+        .hero {
+            height: 80vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f4f4f7;
+            color: #1f1f1f;
+            position: relative;
+            text-align: center;
+        }
+
+        .fixed-card {
+            position: absolute;
+            bottom: 20px;
+            right: 20px;
+            background: #1f1f1f;
+            border: none;
+            width: 18rem;
+            text-align: center;
+            padding: 20px;
+            border-radius: 10px;
+            color: #f4f4f7;
+        }
+
+        .carousel {
+            margin-top: 50px;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 90vh;
+            object-fit: cover;
+            object-position: center;
+            border-radius: 10px;
+        }
+
+        #agendamento {
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .btn-primary {
+            background-color: #1f1f1f;
+            border-color: #1f1f1f;
+        }
+
+        .btn-primary:hover {
+            background-color: #363636;
+            border-color: #363636;
+        }
+
+        .REF {
+            background: #1f1f1f;
+            height: 20vh;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+
+<header class="header py-3">
+    <div class="container d-flex justify-content-between align-items-center">
+        <img src="https://i.imgur.com/wya692e.png" alt="Logo" class="img-fluid" style="max-height: 50px;">
+        <nav>
+            <a href="#carouselExample">Explore Imagens</a>
+            <a href="#agendamento">Agende sua Visita</a>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="main">
+        <h1>Feira<br>Técnica Profissional C.E.P.M.A.C.S.</h1>
+    </div>
+    <div class="fixed-card card">
+        <div class="card-body">
+            <h5 class="card-title">Convite para o Evento Tecnológico</h5>
+            <p class="card-text">Participe do nosso evento incrível e agende sua visita!</p>
+            <a href="#agendamento" class="btn btn-light">Agendar Visita</a>
+        </div>
+    </div>
+</div>
+
+<div class="REF"></div>
+
+<div class="container my-5">
+    <h2 class="text-center mb-4">Explore Nossas Imagens</h2>
+    <div id="carouselExample" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/RafaaSmile/Feira-Tecnologica/refs/heads/main/imagem1.jpg" class="d-block w-100" alt="Imagem 1">
+            </div>
+            <div class="carousel-item active">
+                <img src="https://raw.githubusercontent.com/RafaaSmile/Feira-Tecnologica/refs/heads/main/imagem4.jpg" class="d-block w-100" alt="Imagem 2">
+            </div>
+            <div class="carousel-item">
+                <img src="https://raw.githubusercontent.com/RafaaSmile/Feira-Tecnologica/refs/heads/main/imagem3.jpg" class="d-block w-100" alt="Imagem 3">
+            </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExample" role="button" data-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Anterior</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExample" role="button" data-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Próximo</span>
+        </a>
+    </div>
+</div>
+
+<div id="agendamento" class="container my-5">
+    <h2 class="text-center mb-4">Agende sua Visita</h2>
+    <form id="eventForm">
+        <div class="form-group">
+            <label for="colegio">Nome da Instituição</label>
+            <input type="text" class="form-control" id="colegio" placeholder="Informe o nome da instituição" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-mail para Contato</label>
+            <input type="email" class="form-control" id="email" placeholder="Informe seu e-mail" required>
+        </div>
+        <div class="form-group">
+            <label for="telefone">Telefone para Contato</label>
+            <input type="tel" class="form-control" id="telefone" placeholder="(  ) 00000-0000" required>
+        </div>
+        <div class="form-group">
+            <label for="alunos">Número de Alunos</label>
+            <input type="number" class="form-control" id="alunos" placeholder="Informe o número de alunos" required>
+        </div>
+        <div class="form-group">
+            <label for="data">Data da Visita</label>
+            <input type="date" class="form-control" id="data" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-block">Enviar</button>
+    </form>
+</div>
+
+<script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-app.js";
+    import { getDatabase, ref, set, get } from "https://www.gstatic.com/firebasejs/10.14.0/firebase-database.js";
+
+    const firebaseConfig = {
+        apiKey: "AIzaSyBi0ijQff6zwfQrds8pZz7rhA5CQlxAsVg",
+        authDomain: "feira-profissional-cepmacs.firebaseapp.com",
+        projectId: "feira-profissional-cepmacs",
+        storageBucket: "feira-profissional-cepmacs.appspot.com",
+        messagingSenderId: "932351838017",
+        appId: "1:932351838017:web:eec597cbf43d8d4ebb83c0",
+        measurementId: "G-D2Q1Q5EDHS"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const database = getDatabase(app);
+
+    let lastSubmissionTime = 0; // Armazena o timestamp do último envio
+    let eventId = 1; // Inicializa o ID do evento
+
+    // Função para obter o próximo ID
+    async function getNextEventId() {
+        const idRef = ref(database, 'eventId');
+        const snapshot = await get(idRef);
+        if (snapshot.exists()) {
+            eventId = snapshot.val(); // Obtém o ID armazenado
+        }
+        eventId++; // Incrementa o ID
+        set(idRef, eventId); // Atualiza o ID no Firebase
+    }
+
+    document.getElementById('eventForm').addEventListener('submit', async function(event) {
+        event.preventDefault(); // Evita o envio padrão do formulário
+
+        await getNextEventId(); // Obtém o próximo ID
+
+        const currentTime = Date.now(); // Timestamp atual
+        const timeDiff = currentTime - lastSubmissionTime; // Diferença de tempo desde o último envio
+
+        if (timeDiff < 10000) { // Verifica se passou menos de 10 segundos
+            alert('Por favor, aguarde um pouco antes de enviar novamente.'); // Mensagem de aviso
+            return; // Impede o envio
+        }
+
+        // Atualiza o timestamp do último envio
+        lastSubmissionTime = currentTime;
+
+        // Capturando valores dos campos do formulário
+        const colegio = document.getElementById('colegio').value;
+        const email = document.getElementById('email').value;
+        const tel = document.getElementById('telefone').value; 
+        const alunos = document.getElementById('alunos').value;
+        const data = document.getElementById('data').value;
+
+        // Formando o ID como '1_nome_da_instituicao'
+        const eventRef = ref(database, `eventos/${eventId}_${colegio}`);
+
+        // Enviando os dados para o Firebase
+        set(eventRef, {
+            colegio: colegio,
+            email: email,
+            tel: tel,
+            alunos: alunos,
+            data: data
+        }).then(() => {
+            alert('Evento armazenado com sucesso!'); // Mensagem de sucesso
+            event.target.reset(); // Limpa o formulário
+        }).catch(error => {
+            console.error('Erro ao armazenar evento:', error); // Log de erro
+        });
+    });
+
+    $(document).ready(function() {
+        // Aplica a máscara para o campo de telefone
+        $('#telefone').inputmask({
+            mask: '(99) 99999-9999', // Máscara para telefone com DDD
+            placeholder: ' ', // Placeholder com espaço reservado
+            showMaskOnHover: false,
+            showMaskOnFocus: true,
+            clearIncomplete: true
+        });
+    });
+</script>
+</body>
+</html>
